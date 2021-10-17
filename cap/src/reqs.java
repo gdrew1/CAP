@@ -17,7 +17,11 @@ import javax.persistence.Table;
 @javax.persistence.Entity(name = "reqs")
 public class reqs {
 
-   @Column(name = "job")
+   @Id
+   @Column(name = "id")
+   private int id;
+	
+	@Column(name = "job")
    private String job;
    
    @Column(name = "req")

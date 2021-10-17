@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class test
  */
-@WebServlet("/")
+@WebServlet("/CAP")
 public class test extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -39,7 +39,7 @@ public class test extends HttpServlet {
 		File starting = new File(System.getProperty("user.dir"));
 		File fileToBeRead = new File(starting,"my_file.txt");
 		// TODO Auto-generated method stub
-		String htmlString = Files.lines(Paths.get("C:\\Users\\gdhaw\\OneDrive\\Documents\\Software Engineering\\Workspaces\\CAP\\cap\\start_template.html")).collect(Collectors.joining(System.lineSeparator()));
+		String htmlString = Files.lines(Paths.get(System.getProperty("user.dir") + "/webapps/CAP/start_template.html")).collect(Collectors.joining(System.lineSeparator()));
 		String body = makeStrings(UtilDBDrew.getJobs());
 		htmlString = htmlString.replace("$body", body);
 		response.getWriter().append(htmlString).append(request.getContextPath());
