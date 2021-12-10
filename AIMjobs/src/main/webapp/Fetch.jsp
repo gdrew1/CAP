@@ -10,8 +10,8 @@
 	String driver = "com.mysql.jdbc.Driver";
 	String connectionUrl = "jdbc:mysql://ec2-3-141-98-240.us-east-2.compute.amazonaws.com:3306/";
 	String database = "CAP";
-	String userid = "connector";
-	String password = "12345";
+	String userid = "";
+	String password = "";
 	String jobName = request.getParameter("JobName");
 	String requirements = request.getParameter("Requirements");
 	try {
